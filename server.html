@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNFskie Minecraft Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #282c34;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #61dafb;
+        }
+        .server-info {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #61dafb;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #21a1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the PNFskie Minecraft Server</h1>
+    <p>Join our server and explore endless adventures!</p>
+    <div class="server-info">
+        <p><strong>Server IP:</strong> <span id="server-ip">PNFskie.aternos.me:31279</span></p>
+        <button class="button" onclick="copyToClipboard()">Copy IP</button>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const serverIP = document.getElementById('server-ip').innerText;
+            navigator.clipboard.writeText(serverIP).then(() => {
+                alert("Server IP copied to clipboard!");
+            }).catch(err => {
+                alert("Failed to copy IP. Please try again.");
+            });
+        }
+    </script>
+</body>
+</html>
